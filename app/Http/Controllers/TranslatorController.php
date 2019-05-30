@@ -19,7 +19,7 @@ class TranslatorController extends Controller
      * @param  string $string The string to be translated
      * @return string         The result of the translation
      */
-	public function show($string)
+	public function translate($string)
 	{
 		return $this->parser->translate($string);
 	}

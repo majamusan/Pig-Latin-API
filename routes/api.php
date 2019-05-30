@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('api')->get('/{string}', 'TranslatorController@show')->name('traslate');
+Route::middleware('api')->get('/{string}', 'TranslatorController@translate')->name('traslate');
 
-Route::middleware('api')->get('/', function (Request $request) {
+Route::middleware('api')->get('/', function () {
     return redirect()->route('traslate',['string'=> 'Please enter a string to be translated.']);
 });
